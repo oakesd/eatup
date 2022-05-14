@@ -1,0 +1,71 @@
+CREATE TABLE cuisines (
+  cuisine_id 	INTEGER PRIMARY KEY,
+  cuisine	TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE diets (
+  diet_id	INTEGER PRIMARY KEY,
+  diet		TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE recipes (
+  recipe_id	INTEGER PRIMARY KEY,
+  cuisine_id	INTEGER,
+  diet_id	INTEGER,
+  title		TEXT,
+  description	TEXT,
+  ingredients	TEXT,
+  instructions	TEXT,
+  prep_time	INTEGER DEFAULT 0,
+  cook_time	INTEGER DEFAULT 0,
+  wait_time	INTEGER DEFAULT 0,
+  servings	INTEGER,
+  image_path	TEXT,
+  created	TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (cuisine_id)
+    REFERENCES cuisines (cuisine_id)
+    ON DELETE CASCADE,
+  FOREIGN KEY (diet_id)
+    REFERENCES diets (diet_id)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE accounts (
+  account_id	INTEGER PRIMARY KEY,
+  email		TEXT,
+  user_name	TEXT NOT NULL UNIQUE,
+  password	TEXT NOT NULL,
+  created	TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE VIEW recipe_view
+AS
+SELECT
+  r.recipe_id,
+  r.title,
+  c.cuisine,
+  d.diet,
+  r.description,
+  r.ingredients,
+  r.instructions,
+  r.prep_time,
+  r.cook_time,
+  r.wait_time,
+  r.prep_time + r.cook_time + r.wait_time AS total_time,
+  r.servings,
+  r.image_path
+FROM
+  recipes AS r
+LEFT JOIN cuisines AS c ON r.cuisine_id = c.cuisine_id
+LEFT JOIN diets AS d ON r.diet_id = d.diet_id;
+
+CREATE VIEW last_five
+AS
+SELECT 
+  *
+FROM recipe_view
+ORDER BY recipe_id DESC
+LIMIT 5;
+  
+  
+	

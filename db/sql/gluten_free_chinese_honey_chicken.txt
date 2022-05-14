@@ -1,0 +1,16 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+3 AS diet_id,
+' Gluten Free Chinese Honey Chicken ' AS title,
+' This recipe is very lightly pan fried in olive oil, instead of deep fried. And it’s lightly battered in cornstarch, instead of flour, making it healthier, lighter, and of course, gluten free' AS description,
+' Honey, Gluten free soy sauce – to make this recipe gluten free, I used tamari, also known as gluten-free soy sauce. If you don’t need to make the recipe gluten free, you can use traditional soy sauce. Apple cider vinegar, Sesame oil, Crushed red pepper flakes, Cornstarch – you could also use tapioca starch or rice flour. Brown sugar, Egg, Chicken – for this recipe, I used boneless, skinless chicken breasts. You could also use boneless chicken thighs, if you prefer. Olive oil, Thai chili pepper – this ingredient is optional and will add a little spice to the recipe. If you prefer to keep it on the sweeter side, you can omit the chili pepper. If you can’t find Thai chilies at your local grocery store, you can use minced serrano peppers instead. Green onions, Garlic – I always recommend fresh cloves for the best flavor!' AS ingredients
+' Prepare the sauce. Combine honey, gluten free soy sauce, apple cider vinegar, sesame oil and crushed red pepper flakes in a small bowl and set aside. Prepare the batter station for the chicken. Add one whisked egg to a shallow bowl or large rimmed plate. Combine cornstarch and brown sugar in another shallow bowl. Coat each piece of chicken in the whisked egg. Then move the chicken pieces to the cornstarch mixture, making sure any excess liquid from the egg drips off before you add the chicken to the cornstarch. Cook the chicken. Heat olive oil in a large skillet, or wok, on the stove over medium high heat. Once the oil is hot, add the battered chicken, along with the minced garlic and chili pepper. Cook until browned. After 3-5 minutes, the chicken should be golden brown on all sides. Add the sauce. Once the chicken is browned on the outside, pour the honey sauce over the chicken in the skillet. Cook for 2-3 minutes. Simmer with the sauce. Reduce the heat on the stove to low, cover the skillet and simmer the chicken in the honey sauce for 6-8 minutes. Remove the lid and serve the chicken immediately topped with diced green onions and sesame seeds, if you would like.' AS instructions,
+10 AS prep_time,
+29 AS cook_time,
+0 AS wait_time,
+4 AS servings,
+'img/gluten_free_chinese_honey_chicken.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Chinese (Traditional);
+
+

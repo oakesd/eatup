@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+5 AS diet_id,
+'Fathead Pizza Dough' AS title,
+'Keto-friendly pizza dough made from cheese and almond flour.' AS description,
+'1 1/2 cups mozzarella cheese, 2 tbsp cream cheese, 1 lg egg, ¾ cup almond flour' AS ingredients,
+'Preheat oven to 425 degrees F (218 degrees C). Line a baking sheet or pizza pan with parchment paper. Mix flour and eggs in a large bowl or food processor. Melt mozzarella and cream cheese together in a medium bowl (90-120 seconds in the microwave, or on the stove in a double-boiler if preferred). Mix warm cheese into flour mixture until uniform (by hand, with hand mixer, or in food processor). Spread dough to desired size and thickness on a pizza pan lined with parchment paper (by hand or with rolling pin). Poke holes throughout crust with a fork to prevent air bubbles. Bake in oven until lightly browned (about 6-8 minutes). To make pizza, add desired toppings and return to oven for another 8-10 minutes.' AS instructions,
+10 AS prep_time,
+10 AS cook_time,
+0 AS wait_time,
+4 AS servings,
+'img/fathead_pizza_dough.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';
+

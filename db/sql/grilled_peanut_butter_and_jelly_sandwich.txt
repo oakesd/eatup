@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+13 AS diet_id,
+'Grilled Peanut Butter and Jelly Sandwich' AS title,
+'Small twist on your favorite childhood snack!' AS description,
+'2 slices of bread of your choice, 2 tablespoons of peanut butter, 2 tablespoons of jelly, 2 tablespoons of butter' AS ingredients,
+'On each slice of bread spread a tablespoon of butter on one side. On the first slice of bread, spread 2 tablespoons of peanut butter on the non-buttered side. On the other slice of bread, spread 2 tablespoons of jelly on the non-buttered side. Then place the breads on top of each other. Place the sandwich on a medium pan and cook for about 3 minutes or until golden brown. Flip the sandwich and cook the other side for 3 minutes or until golden brown. Once done, let it cool for about 1-2 minutes and then enjoy!' AS instructions,
+8-10 AS prep_time,
+5-8 AS cook_time,
+0 AS wait_time,
+1 AS servings,
+'img/grilled_peanut_butter_and_jelly_sandwich.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';
+

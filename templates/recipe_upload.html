@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/styles/recipe_upload.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<!-- Import Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Fun social media icons I figured we could have for style points -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<title>EatUp | Recipe Submission Form</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/recipe_upload.css') }}">
+
+{% endblock %}
+
+{% block body %}
+<ul class="nav">
+	<!-- <img src="\static\media\EatUpLogo.png" alt="EatUp" width="80" height="80"> -->
+    	<!-- Top Header Navigation -->
+	<nav class="w3-bar w3-black">
+		<a href="{{ url_for('home') }}" class="w3-button w3-bar-item">Home</a>
+		<a href="{{ url_for('recipe_list') }}" class="w3-button w3-bar-item">View Our Catalog</a>
+		<a href="{{ url_for('logout') }}" class="w3-button w3-bar-item">Logout</a>
+	</nav>
+
+</ul>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <div class="row">
+        {% with errors = get_flashed_messages(category_filter=["error"]) %}
+        {% if errors %}
+        {% for error in errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error! </strong><span>{{ error }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% with messages = get_flashed_messages(category_filter=["success"]) %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success! </strong><span>{{ message }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- Recipe Name -->
+            <label for="recipe_name" class="form-label">Recipe Name</label>
+            {{ form.recipe_name(class_='form-control') }}
+        </div>
+
+        <div class="col">
+            <!-- Cuisine Type -->
+            <label for="cuisine_type" class="form-label">Cuisine Type</label>
+            {{ form.cuisine_type(class_='form-control') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Diet Type -->
+            <label for="diet_name" class="form-label">Diet</label>
+            {{ form.diet_type(class_='form-control') }}
+        </div>
+
+        <div class="col">
+            <!-- Prep Time -->
+            <label for="prep_time" class="form-label">Prep Time</label>
+            {{ form.prep_time(class_='form-control', placeholder='in minutes') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Cook Time -->
+            <label for="cook_time" class="form-label">Cook Time</label>
+            {{ form.cook_time(placeholder='in minutes', class_='form-control') }}
+        </div>
+        <div class="col">
+            <!-- Wait Time -->
+            <label for="wait_time" class="form-label">Wait Time</label>
+            {{ form.wait_time(placeholder='in minutes', class_='form-control') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Servings -->
+            <label for="servings" class="form-label">Servings</label>
+            {{ form.servings(class_='form-control') }}
+        </div>
+
+        <div class="col">
+            <div class="mb-3">
+                <!-- Upload Photo -->
+                <label for="image_upload" class="form-label">Upload Photo</label>
+                {{ form.image_upload(class_='form-control') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Ingredients -->
+            <label for="ingredients" class="form_label">Ingredients</label>
+            {{ form.ingredients(rows='10', cols='30', class_='form-control') }}
+        </div>
+        <div class="col">
+            <!-- Description -->
+            <label for="desc" class="form_label">Description</label>
+            {{ form.desc(rows='10', cols='30', class_='form-control') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <!-- Instructions -->
+            <label for="instructions" class="form-label">Instructions</label>
+            {{ form.instructions(rows='10', cols='30', class_='form-control') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <br>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <a href="/" id="cancel" name="cancel" class="btn btn-danger">Cancel</a>
+        </div>
+    </div>
+</form>
+{% endblock %}

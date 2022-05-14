@@ -1,0 +1,14 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Brown Sugar Bourbon Chicken' AS title,
+'A juicy bourbon chicken with apple pan sauce, garlic mashed potatoes & zesty green beans' AS description,
+'12 oz yukon gold potatoes, 1 clove garlic, 2 scallions, 1 lemon, 10 oz chicken, 10 oz brown sugar bourbon seasoning, 1 apple, 3 oz chicken stock concentrate, 2 tbsp sour cream, 6 oz green beans, 2 tbsp butter, 1/2 tsp sugar' AS ingredients,
+'Adjust rack to top position and preheat oven to 425 degrees. Wash and dry produce. Dice potatoes into 1/2 inch thick pieces. Peel garlic. Place potatoes and whole garlic in a medium pot with enough salted water to cover by 2 inches. Bring to a boil and cook until tender (15-20 minutes). Halve, core, and dice apple into 1/4 inch pieces. Trim and thinly slice scallions, separating whites from greens. Zest and quarter lemon. Trim green beans if necessary. Toss on a baking sheet with a drizzle with olive oil, salt, and pepper. Roast on top rack until browned and tender (12-15 minutes). Pat the chicken dry and season lightly with salt and pepper, then rub all over with Brown Sugar Bourbon Seasoning. Heat a drizzle of oil in a large pan over medium heat. Add chicken and cook until browned and cooked through (5-7 minutes per side). Heat 1 tbsp butter and a drizzle of oil in the same pan used to cook the chicken. Add apple and scallion whites, seasoning with salt and pepper. Cook, stirring occasionally until golden (4-6 minutes). Stir in stock concentrate, 1/2 cup water, and 1/2 tsp sugar. Cook until apple is tender and sauce has thickened (5-7 minutes). Season with salt and pepper. Mash potatoes and garlic with sour cream and 1 tbsp butter until smooth and creamy, season with salt and pepper. Toss green beans with lemon zest. Serve and enjoy!' AS instructions,
+10 AS prep_time,
+35 AS cook_time,
+20 AS wait_time,
+2 AS servings,
+'img/brown_sugar_bourbon_chicken.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';

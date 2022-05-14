@@ -1,0 +1,14 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Cripsy Parmesan Chicken' AS title,
+'Parmesan encrusted chicken with garlic scallion couscous & lemony roasted carrots.' AS description,
+'12 oz carrots, 1 clove garlic, 2 scallions, 1 lemon, 10 oz chicken cutlets, 1/4 cup panko breadcrumbs, 1/4 cup grated parmesan cheese, 1 tsp hot smoked paprika, 2 tbsp sour cream, 2 1/2 oz Israeli couscous, 2 tbsp butter' AS ingredients,
+'Adjust rack to middle position and preheat oven to 425 degrees. Wash and dry produce. Bring a medium pot of salted water to a boil. Trim, peel, and halve carrots lengthwise; cut crosswise into 2-inch-long pieces. Peel and mince garlic. Trim and thinly slice scallions, separating whites from greens. Zest and quarter lemon. In a small bowl, combine panko, parmesan, paprika, and a large drizzle of olive oil, and a pinch of salt and pepper. Pat chicken dry and season all over with salt and pepper. Place on one side of a baking sheet. Spread tops of chicken with sour cream. Mound with panko mixture, pressing to adhere. Toss carrots on opposite side of sheet from chicken with a large drizzle of olive oil, salt, and pepper. Roast on middle rack until chicken is cooked through and carrots are browned and tender (15-20 minutes). While chicken and carrots roast, add couscous to boiling water. Cook until tender (6-8 minutes). Melt 2 tbsp butter in empty pot over medium heat. Add scallion whites and garlic. Cook until softened (1 minute). Return cooked couscous to pot and stir until coated. Taste and season with salt and pepper. Once carrots are done roasting, carefully toss with lemon zest and a squeeze of lemon juice to taste. Serve with lemon wedges.' AS instructions,
+10 AS prep_time,
+40 AS cook_time,
+20 AS wait_time,
+2 AS servings,
+'img/crispy_parmesan_chicken.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';

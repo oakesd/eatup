@@ -1,0 +1,150 @@
+body {
+    font-family: 'Quattrocento', serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input,
+select,
+textarea {
+    border-radius: 5px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    resize: none;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+select:focus,
+textarea:focus {
+    border: 3px solid #555;
+}
+
+form {
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    border: 3px solid #555;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form p {
+    margin: 0;
+}
+
+.desc {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+}
+
+.upload-photo {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+.desc-ing {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+}
+
+.cuisine-type {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.prep-time {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.cook-time {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.servings {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+.instructions {
+    grid-row: 5 / 7;
+    grid-column: 2 / 3;
+}
+
+.wait-time {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+/* Buttons */
+input[type=submit] {
+    width: 100%;
+    /* height: 50px; */
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.half-width {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.cancel-btn {
+    width: 100%;
+    padding: 12px;
+    height: 50px;
+    margin: 10px 0 10px 0;
+    outline: none;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+}

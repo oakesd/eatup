@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Melty Monterey Jack Burgers' AS title,
+'A juicy cheesey oh so good burger with onion jam, garlic mayo and crispy potato wedges.' AS description,
+'5 tsp Balsamic Vinegar, 12 oz Yukon Gold Potatoes, 10 oz Ground Beef, 2 tbsp Mayonnaise 2 tbsp Ketchup, 1 tbsp Fry Seasoning, ½ cup Monterey Jack Cheese, 2 Potato Buns, 1 Yellow Onion, 1 Clove, 1 tsp sugar ' AS ingredients,
+'Adjust rack to top position and preheat oven to 425 degrees. Wash and dry produce.Cut potatoes into ½ inch thick wedges. Halve, peel, and thinly slice the onion. Peel and mince or gate half the garlic. Toss potatoes on a baking sheet with a drizzle of oil, half the Fry Seasoning, salt, and pepper. Roast on top rack until browned and crispy for 20-25 minutes. Heat a drizzle of oil in a large pan over medium heat. Add onion, cook, stirring occasionally, until browned and softened, 8-10 minutes. Stir in vinegar and 1 tsp sugar. Continue cooking until onion is caramelized and jammy, 2-3 minutes more. Season with salt and pepper. In a second small bowl, combine mayonnaise with a pinch of garlic, season with salt and pepper. Form beef into two patties, each slightly wider than the burger bun. Season all over with salt and pepper. Heat a drizzle of oil in a pan used for onion over medium-high heat. Add patties, cook to desired doneness, 3-5 minutes per side. In the last minute of cooking, to with Monterey jack cheese. Half buns and toast them until golden. Spread cut sides of buns with ketchup and garlic mayo to taste. Fill with patties and as much onion jam as you like. Serve with crispy potato wedges on the side. ' AS instructions,
+10 AS prep_time,
+35 AS cook_time,
+20-25 AS wait_time,
+2 AS servings,
+'img/melty_monterey_jack_burgers.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';
+

@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+10 AS diet_id,
+'Creamy Tuscan Chicken' AS title,
+'This creamy paleo Tuscan chicken is a super-tasty one-skillet meal that’s perfect for weeknights and full of flavor! Boneless, skinless chicken thighs are seared and cooked with a creamy sauce packed with spinach and sun-dried tomatoes. Paleo, dairy-free, Whole30, and Keto friendly! ' AS description,
+'1.5 lbs chicken thighs boneless and skinless, 1 Tbsp coconut oil plus additional if needed, Sea salt and pepper, 1/4 tsp garlic powder, 1/4 tsp onion powder, 1 small onion chopped, 4 cloves garlic minced, 1 Tbsp tapioca flour or arrowroot, 1 cup chicken bone broth, 1/2 cup coconut milk full fat, blended before adding if needed, 1/2 Tbsp stone ground mustard,1 1/2 Tbsp nutritional yeast optional, 1 tsp Italian seasoning blend, 1/4 tsp sea salt or to taste, 1/8 tsp black pepper or to taste, 2/3 cup sun dried tomatoes roughly chopped, 1 1/2 cups baby spinach roughly chopped ' AS ingredients,
+Season the chicken with sea salt, pepper, garlic, and onion powder. In a large skillet add the coconut oil and cook the chicken thighs on medium-high heat for 5-7 minutes on each side or until browned and no longer pink in center. Remove chicken and set aside on a plate. Add additional oil if necessary and cook the onions over medium heat until soft, then stir in the garlic and cook another 45 seconds. Whisk in the tapioca or arrowroot, the add the broth and coconut milk. Stir to combine, then stir in the mustard, yeast, Italian seasoning, sea salt and pepper. Cook and stir over medium-high heat until it starts to thicken. Add the spinach and sun-dried tomatoes and allow mixture to simmer until spinach is wilted and tomatoes are softened. Add chicken back to the skillet and simmer another 2 minutes. Serve over cauli rice, zucchini noodles, or with roasted potatoes. Enjoy! ' AS instructions,
+5 AS prep_time,
+20 AS cook_time,
+0 AS wait_time,
+6 AS servings,
+'img/creamy_tuscan_chicken.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Italian;
+

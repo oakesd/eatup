@@ -1,0 +1,122 @@
+body {
+    font-family: 'Quattrocento', serif;
+}
+
+form {
+    width: 1000px;
+    margin: auto;
+    border: 3px solid #555;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+.filter_btns {
+    width: 100%
+    float: center
+}
+
+.filter_title {
+    font-family: 'Quattrocento', serif;
+    text-align: center
+}
+
+.recipe_link {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap
+}
+
+.recipe_link:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.recipe_link {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+
+
+.card {
+	height: px;
+	width: 300px;
+	background-color: rgb(190, 190, 190);
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.card-container {
+	display: flex;
+}
+.img {
+	height: 250px;
+	width:100%;
+	background: orange;
+}
+
+.recipe-container {
+	position: relative;
+  }
+  
+  .recipe-image {
+      display: flex;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .recipe-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #ffffff;
+  }
+  
+  .recipe-container:hover .recipe-overlay {
+	opacity: 0.7;
+  }
+  
+  .recipe-text {
+	color: rgb(20, 20, 20);
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+
+  .table-row {
+      display: table-row;
+      width: auto;
+      clear: both;
+  }
+  .table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;         
+  }
+
+  

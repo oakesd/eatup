@@ -1,0 +1,29 @@
+ul.nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+
+ul.nav li.nav,
+a.nav {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Poppins';
+}
+
+a.nav {
+	transition: 0.7s;
+}
+
+a.nav:hover {
+	background: gray;
+	color: white;
+}

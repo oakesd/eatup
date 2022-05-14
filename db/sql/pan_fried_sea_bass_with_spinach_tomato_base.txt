@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+11 AS diet_id,
+'Pan Fried Sea Bass with Spinach Tomato Base' AS title,
+'This recipe for pan fried sea bass served with spinach and tomatoes is perfect a quick healthy meal.  ' AS description,
+'300g spinach, washed, 1 garlic clove, finely chopped, Pinch of chili flakes, 6-8 cherry tomatoes, quartered, 2 fillets of sea bass, Olive oil, Salt & Pepper, 1/2 lemon, juice  ' AS ingredients,
+'First, prepare the spinach and tomato base. First, blanch the spinach in boiling salted water for 2 minutes Drain spinach and put in a bowl of iced or very chilly water to stop it from cooking. Then finely chop it up. Squeeze out the excess water.  Fry the garlic and chili flakes in a drizzle of olive oil for 3 minutes on a medium heat. Try not to let it brown Add the tomatoes and cook for a further 2 minutes. Finally, add the spinach, mix all ingredients together. Cook for a further 2 minutes. Moving on to the fish, drizzle a little olive oil into a frying pan. Season the fish and place skin facing down on a low-medium heat. Cook for 2-3 minutes till the skin browns. Then turn it over, squeeze over with lemon juice and cook for a further 2 minutes. Fish should be cooked through but still moist. Serve Pan fried sea bass on top of the spinach and tomato mix. Voila! Super easy and super quick. ' AS instructions,
+5 AS prep_time,
+10 AS cook_time,
+0 AS wait_time,
+2 AS servings,
+'img/pan_fried_sea_bass_with_spinach_tomato_base.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Itailian';
+

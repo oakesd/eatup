@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Jamaican Jerk Chicken Pasta' AS title,
+'Jamaican jerk seasoning with spring onions and colorful bell peppers make this spicy pasta dish with a Jamaican spin stand out.' AS description,
+'1 lbs (500 grams) boneless skinless chicken breast, 4 tbsp jerk seasoning (divided), salt (to taste), 2 tbsp vegetable oil (divided), 1 lbs (450 grams) pasta, 1 green bell pepper (sliced), 1 red bell pepper (sliced), 1 orange bell pepper (sliced), 3 green onions (sliced), 3 garlic cloves (minced), 1/4 cup chicken broth, 1 cup heavy cream, 1/2 cup parmesan cheese (grated)' AS ingredients,
+'Season the chicken all over with 3 tablespoons jerk seasoning and salt. Heat a large saute pan over medium-high heat, then pour in 1 tablespoon oil. Add in the seasoned chicken breasts, cook until golden brown on the outside and juices run clear (about 7-8 minutes per side). Remove the chicken from the pan and set it aside to rest. Cook pasta according to package instructions in well salted water to al dente. Drain and set aside. Heat the remaining oil in the same pan and sauté the pepper and onion, cooking until the onion softens. Stir in the garlic and remaining jerk seasoning. Heat until fragrant. Pour in the chicken broth and heavy cream. Simmer for a few minutes or until the sauce thickens, then mix in the parmesan. Slice the chicken and toss to combine with the pasta in the sauce with the peppers. Serve and enjoy!' AS instructions,
+5 AS prep_time,
+26 AS cook_time,
+0 AS wait_time,
+6 AS servings,
+'img/jamaican_jerk_chicken_pasta.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Caribbean';
+

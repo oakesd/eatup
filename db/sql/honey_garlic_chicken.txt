@@ -1,0 +1,13 @@
+INSERT INTO recipes (cuisine_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+'Honey Garlic Chicken' AS title,
+'Honey Garlic Chicken Sheet Pan Meal with carrots, broccoli, and baby potatoes.' AS description,
+'3 lbs chicken thighs (bone-in and skin-on), 1/4 cup honey, 1/4 cup soya sauce, 4 cloves garlic (minced), 1 tbsp rice wine vinegar, 5-6 medium carrots (halved), 1 broccoli head (chopped), 1/2 lb baby russet potatoes, 2 tbsp olive oil, salt & sepper to taste, sesame seeds for garnish, optional' AS ingredients, 
+'Preheat oven to 400 degrees F. In a medium bowl, whisk together honey, soya sauce, garlic, and vinegar. Place the chicken in a baking dish and cover with 3/4 of the marinade, reserving the rest. Allow the chicken to marinade for 30 minutes in the refrigerator. Arrange the chicken, carrots, and potatoes on a baking sheet in a single layer. Drizzle with oil and season with salt and pepper to taste. Bake in the oven for 22-25 minutes. Add broccoli and drizzle with the reserved marinade. Return to oven for 10 minutes, or until chicken is completely cooked through. Garnish with sesame seeds and serve.' AS instructions,
+15 AS prep_time,
+35 AS cook_time,
+0 AS wait_time,
+6 AS servings,
+'img/honey_garlic_chicken.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Caribbean';

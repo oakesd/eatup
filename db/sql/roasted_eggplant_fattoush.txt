@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+4 AS diet_id,
+'Roasted Eggplant Fattoush' AS title,
+'You can't go past a roast eggplant when it comes to flavor, and with a good sprinkling of crispy flatbread and feta for protein.' AS description,
+'4 small eggplants, 100ml extra virgin olive oil, 1 Lebanese flatbread, 1/2 tsp ground cumin, 1 1/2 tsp sumac, 5 heirloom tomatoes- sliced, 1 red onion, thinly sliced into rounds, 200g feta, sliced, 1/2 bunch each mint and flat-leaf parsley leaves, 1/4 bunch basil leaves, 2 tbs pomegranate molasses, Juice of 1 lemon' AS ingredients,
+'Preheat oven to 200°C. Place eggplants on a baking paper-lined baking tray and drizzle with 2 tbs oil. Sprinkle with a little salt and roast for 40 minutes or until very tender when pierced with the tip of a sharp knife. Set aside to cool. Meanwhile, heat 1 tbs oil in a frypan over medium heat. Roughly tear bread and add to pan. Cook, turning occasionally, for 6-7 minutes until crisp and golden. Add cumin and 1/2 tsp sumac to pan and toss to coat. Remove from heat. Place 1 eggplant on each serving plate and split in half. Divide tomato, onion, feta, and herbs among serving plates with fried bread. Whisk molasses, lemon juice and the remaining 2 tbs oil and 1 tsp sumac in a bowl. Season, then drizzle over salad to serve.' AS instructions,
+10 AS prep_time,
+40 AS cook_time,
+0 AS wait_time,
+4 AS servings,
+'img/roasted_eggplant_fattoush.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Itailian';
+

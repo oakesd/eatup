@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+14 AS diet_id,
+'Kimchi Fried Rice' AS title,
+'Simple Kimchi Fried Recipe that is macro tracking friendly.' AS description,
+'8 oz Ground Beef, 1 cup of minute maid jasmine rice, 2 cloves of garlic, 6 oz of kimchi, cooking spray' AS ingredients,
+'Rough chop Kimchi into small bite size pieces. Mince the 2 cloves or garlic. Cover pan with cooking spray of your choice (preferably low to no calorie spray). Add ground beef into pan and cook until no more red or pink color. Add garlic into pan and let it cook for about 30 seconds. Add kimchi into pan and stir everything together for about 3-5 minutes. Then add your cup of rice. Once everything is mixed together it is ready to eat!' AS instructions,
+10 AS prep_time,
+15 AS cook_time,
+0 AS wait_time,
+1 AS servings,
+'img/kimchi_fried_rice.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Koren;
+

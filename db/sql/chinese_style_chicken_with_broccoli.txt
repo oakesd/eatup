@@ -1,0 +1,14 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+6 AS diet_id,
+'Chinese Style Chicken with Broccoli ' AS title,
+'Quick & easy, Chinese Kosher healthy dinner with Broccoli, chicken breast and mushrooms. ' AS description,
+'Cut chicken into 1/8-inch slices. Sprinkle pepper, paprika, and garlic. Add soy sauce and allow to stand for 15 minutes. Cut broccoli head into individual florets. Slice broccoli stems and mushrooms. Heat two tablespoons of oil in skillet. Add broccoli, mushrooms, and salt. Stir-fry for two minutes.  Add water and cook, covered, for three to five minutes. Remove from skillet. Place two tablespoons of oil into skillet with the chicken. Stir-fry for three to five minutes.  Serve with rice or noodles. Add vegetables. Dissolve cornstarch in broth and add. Cook for one minute or until thickened.' AS instructions,
+5 AS prep_time,
+20 AS cook_time,
+0 AS wait_time,
+2 AS servings,
+'img/chinese_style_chicken_with_broccoli.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Chinese (American);
+

@@ -1,0 +1,15 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+2 AS diet_id,
+'Passover Chocolate Mousse Cake' AS title,
+'The egg whites make the base of the cake fluffy, like a chocolate pillow, and the top of the cake is rich and creamy, thanks to the egg yolks.' AS description,
+'10.5 oz. dark chocolate, preferably 60 to 70% cacao, 6 Tbsp dairy-free butter substitute, 6 large eggs, separated, ¼ cup plus 3 Tbsp. sugar, Chocolate shavings, for decoration (optional).' AS ingredients,
+'Preheat the oven to 350°F (180°C). Line the bottom of a 9-inch (23-cm) springform pan with parchment paper. Break up or chop the chocolate and place it in a heatproof bowl with the butter or margarine. Set the bowl over a saucepan of barely simmering water and allow the chocolate and butter to melt, stirring occasionally. When everything has melted, remove from the heat and let cool to room temperature. In the meantime, put the egg yolks in a large bowl. In the bowl of a stand mixer fitted with the whisk attachment, or in a large bowl, using a handheld mixer, whip the egg whites to very firm peaks, about 5 minutes. When the melted chocolate mixture has cooled, add it to the egg yolks, along with the sugar, and whisk well. Using a rubber spatula, stir about one-third or less of the egg whites into the chocolate mixture to lighten it. Carefully spoon another third of the egg whites on top of the chocolate mixture and gently fold them in. Add the remaining whites and fold them in just until incorporated. Transfer half of the batter to another bowl and set aside in the refrigerator. Pour the remaining batter into the prepared pan and bake for 20 minutes: it will turn into a soft, moist cake. Remove from the oven and let cool completely in the pan. When the cake has reached room temperature, pour the reserved chocolate mousse on top of it. Refrigerate the mousse cake, uncovered, for at least 2 hours, or overnight, until set. When you’re ready to serve, run a sharp thin-bladed knife around the cake’s edges and then remove the sides of the springform pan. Peel the paper from the bottom, and place the cake on a serving platter. Serve cold, decorated with chocolate shavings, if desired. Leftover cake will keep in the refrigerator, wrapped in aluminum foil, for a couple of days.' AS instructions,
+20 AS prep_time,
+20 AS cook_time,
+120 AS wait_time,
+8 AS servings,
+'img/passover_chocolate_mousse_cake.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'American';
+

@@ -1,0 +1,14 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Chicken Alfredo ' AS title,
+'Simple and easy chicken alfredo ' AS description,
+'8oz dried fettuccine pasta, 2 boneless chicken breasts, 1 tablespoon canola oil, 2 cloves of garlic, minced, 1 cup of heavy cream, 1 cup of grated parmesan, 2 cloves of garlic, minced, 5 tablespoons of salted butter' AS ingredients,
+'Bring a large amount of water to a boil. Add the dry pasta and cook until al dente. Drain the pasta and then reserve about a ½ cup of pasta water to the side. Add canola oil to a medium to hot frying pan and then add chicken and cook until for about 14-16 minutes or when all the way cooked. Make sure you flip chicken halfway through. Once cooked move chicken over to a cutting board and slice into small bite size pieces. Add butter and garlic into cookie pan and sauté for about 1 minute. Add heavy cream into pan and whisk for about 4 minutes. And the drained pasta and pasta water and mix everything together. Add chicken on top. ENJOY!' AS instructions,
+15 AS prep_time,
+30 AS cook_time,
+0 AS wait_time,
+4 AS servings,
+'img/chicken_alfredo.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisine = 'Italian';

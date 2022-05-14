@@ -1,0 +1,14 @@
+INSERT INTO recipes (cuisine_id, diet_id, title, description, ingredients, instructions, prep_time, cook_time, wait_time, servings, image_path)
+SELECT c.cuisine_id,
+0 AS diet_id,
+'Mexican Shrimp Tacos' AS title,
+'Mexican Shrimp Tacos! Jumbo seasoned shrimp. Made with an authentic blend. Bringing out the best flavor in every bite!' AS description,
+'1 1/2 lbs shrimp, oil, limes, 1/4 cup red onions, 1/2 cup bell peppers (red/green), 1/4 cup chopped cilantro, tomatoes to garnish, salt and pepper to taste, 1 tsp ground cumin, 1 tsp dried oregano, 1 tsp paprika, 1/2 tsp chili powder, 1 tsp garlic powder, 1 tsp onion powder, avocado sliced or cubed, Taqueria Sauce to taste; mayo, onion powder, chili powder, garlic powder, jalapeno juice, paprika, and cumin to taste' AS ingredients,
+'Add oil to a hot skillet. Add bell peppers and onions and sauté then until they are semi-cooked and translucent. Season shrimp with salt, black pepper, cumin, oregano, paprika, chili powder, garlic powder, and onion powder. Add the shrimp to the skillet and sear on both sides. In a separate bowl combine mayo, onion powder, garlic powder, chili powder, paprika, cumin and jalapeno juice. Add shrimp to warm tortillas with a spritz of fresh lime juice, Taqueria sauce, avocados, salsa, and chopped cilantro. Serve and Enjoy!' AS instructions,
+5 AS prep_time,
+10 AS cook_time,
+0 AS wait_time,
+4 AS servings,
+'img/mexican_shrimp_tacos.jpg' AS image_path
+FROM cuisines AS c
+WHERE c.cuisines = 'Mexican';

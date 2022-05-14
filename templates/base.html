@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Dont like how to link things I have to embedd double parens with url_for.
+Just doesnt sit right but thats python for you.-->
+<html lang="en">
+
+<head>
+    <!-- Meta Info -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Google Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Quattrocento:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Import Additional Styles Here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+    <!-- Import Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="icon" href="\static\media\EatUpLogo.png" type="image/icon type">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+    <!-- Add bootstrap JQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+<footer style="width: 100%; text-align: center;">
+	<br><br><br>
+	<img src="\static\media\EatUpLogoBig.png" alt="EatUp" width="250" height="250">
+	<p class="mt-5 mb-3 text-muted">&copy; EatUp 2022</p>
+</footer>
+
+</html>
